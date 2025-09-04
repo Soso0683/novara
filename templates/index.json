@@ -247,15 +247,18 @@
         "item_HaVcXe",
         "item_3DpfgM"
       ],
+      "custom_css": [
+        ".section-full {padding-top: 10px; padding-bottom: 0px;}"
+      ],
       "name": "Multi-column",
       "settings": {
         "full_width": true,
         "stack_on_mobile": false,
         "gap": "medium",
         "text_alignment": "start",
-        "subheading": "About",
-        "title": "Featured content",
-        "content": "<p>Organize content into multiple columns to share useful information to your customers about your products, values...</p>",
+        "subheading": "",
+        "title": "",
+        "content": "",
         "background": "",
         "background_gradient": "",
         "text_color": ""
