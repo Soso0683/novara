@@ -6,50 +6,25 @@
 <section id="logos2-{{ section.id }}" class="l2up" role="region" aria-label="Logotipos">
   <div class="l2up-vp">
     <div class="l2up-track" style="--visible:2;">
-      <!-- Logo Marie Claire -->
-      <div class="l2up-item">
-        <img
-          class="l2up-img"
-          src="https://cdn.shopify.com/s/files/1/0925/6645/4658/files/Marie_Claire_Magazine_logo_svg.png?v=1757019169"
-          alt="Marie Claire"
-          loading="lazy"
-        >
-      </div>
-
-      <!-- Logo Vogue -->
-      <div class="l2up-item">
-        <img
-          class="l2up-img"
-          src="https://cdn.shopify.com/s/files/1/0925/6645/4658/files/VOGUE_LOGO_1.svg?v=1757019169"
-          alt="Vogue"
-          loading="lazy"
-        >
-      </div>
-
-      <!-- Logo Allure -->
-      <div class="l2up-item">
-        <img
-          class="l2up-img"
-          src="https://cdn.shopify.com/s/files/1/0925/6645/4658/files/images_3.png?v=1757019169"
-          alt="Allure"
-          loading="lazy"
-        >
-      </div>
-
-      <!-- Logo Cosmopolitan -->
-      <div class="l2up-item">
-        <img
-          class="l2up-img"
-          src="https://cdn.shopify.com/s/files/1/0925/6645/4658/files/images_4.png?v=1757019169"
-          alt="Cosmopolitan"
-          loading="lazy"
-        >
-      </div>
+      {%- for block in section.blocks -%}
+        <div class="l2up-item" {{ block.shopify_attributes }}>
+          {%- if block.settings.logo != blank -%}
+            <img
+              class="l2up-img"
+              src="{{ block.settings.logo | img_url: '300x' }}"
+              srcset="{{ block.settings.logo | img_url: '200x' }} 200w, {{ block.settings.logo | img_url: '300x' }} 300w, {{ block.settings.logo | img_url: '400x' }} 400w"
+              sizes="(max-width: 640px) 40vw, 20vw"
+              alt="{{ block.settings.alt | escape }}"
+              loading="lazy"
+            >
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
     </div>
   </div>
 
   <style>
-    /* --- Ámbito por id de la sección --- */
+    /* --- Ámbito por id de sección --- */
     #logos2-{{ section.id }}.l2up{
       --gap: 24px;
       --img-h: 42px;
@@ -90,7 +65,7 @@
       let items   = Array.from(root.querySelectorAll('.l2up-item'));
       const visible = 2;
 
-      if (items.length <= visible) return; // no hace falta deslizar
+      if (items.length <= visible) return; // no hace falta desplazar
 
       // Duplicar todos los items para un bucle fluido
       items.forEach(el => track.appendChild(el.cloneNode(true)));
@@ -99,7 +74,7 @@
       items = Array.from(track.children);
 
       let index = 0;
-      const interval = 5000; // 5 segundos
+      const interval = parseInt({{ section.settings.interval | default: 5000 }}) || 5000;
 
       // Calcular el paso en píxeles (ancho de un item + gap)
       function getStepPx(){
@@ -114,17 +89,17 @@
         track.style.transform = 'translateX(' + (-i * step) + 'px)';
       }
 
-      // Al llegar al final de los originales, reset instantáneo
+      // Al llegar al final de los originales, reiniciar discretamente
       track.addEventListener('transitionend', () => {
         if (index >= (items.length / 2)) {
           index = 0;
-          go(index, false);
+          go(index, false); // reinicio instantáneo
         }
       });
 
       let timer = setInterval(() => {
-        index += 1; // mueve 1 logo
-        go(index, true);
+        index += 1;          // paso de 1 logo
+        go(index, true);     // nuevo slide entra desde la derecha
       }, interval);
 
       // Pausa al pasar el ratón
@@ -139,3 +114,30 @@
     })();
   </script>
 </section>
+
+{% schema %}
+{
+  "name": "Logos 2up",
+  "settings": [
+    {
+      "type": "number",
+      "id": "interval",
+      "label": "Intervalo (ms)",
+      "default": 5000,
+      "info": "Tiempo entre desplazamientos (p. ej.: 5000 = 5 s)"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Logo",
+      "settings": [
+        { "type": "image_picker", "id": "logo", "label": "Imagen del logo" },
+        { "type": "text", "id": "alt", "label": "Texto alternativo", "default": "Logotipo" }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [{ "name": "Logos 2up" }]
+}
+{% endschema %}
