@@ -73,6 +73,32 @@
         "text_color": ""
       }
     },
+    "rich_text_TdtEqU": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_pm9dLT": {
+          "type": "heading",
+          "settings": {
+            "text": "¿Por qué elegir la mascarilla de cúrcuma?",
+            "heading_tag": "h2",
+            "text_color": "",
+            "gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_pm9dLT"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "featured-product": {
       "type": "featured-product",
       "blocks": {
@@ -229,6 +255,7 @@
     "custom_liquid_iwDhBw",
     "custom_liquid_CwzcdP",
     "custom_liquid_H9qwNp",
+    "rich_text_TdtEqU",
     "featured-product",
     "faq"
   ]
