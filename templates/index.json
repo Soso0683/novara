@@ -123,8 +123,8 @@
         "heading_xQ6A4h": {
           "type": "heading",
           "settings": {
-            "text": "Más de 5 800 mujeres ya la han adoptado. ¿Y usted?",
-            "heading_tag": "h1",
+            "text": "Más de 5 800 mujeres ya la han adoptado.   ¿Y usted?",
+            "heading_tag": "h2",
             "text_color": "",
             "gradient": ""
           }
