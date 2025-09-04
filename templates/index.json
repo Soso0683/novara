@@ -140,6 +140,9 @@
         "heading_xQ6A4h",
         "richtext_bcTUtC"
       ],
+      "custom_css": [
+        ".section-full {padding-top: 10px; padding-bottom: 20px;}"
+      ],
       "name": "Rich text",
       "settings": {
         "full_width": true,
