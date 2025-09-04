@@ -1,0 +1,141 @@
+{% comment %}
+  Sección: Logos 2up (auto, paso=1, colores originales)
+  Archivo: sections/logos-2up.liquid
+{% endcomment %}
+
+<section id="logos2-{{ section.id }}" class="l2up" role="region" aria-label="Logotipos">
+  <div class="l2up-vp">
+    <div class="l2up-track" style="--visible:2;">
+      <!-- Logo Marie Claire -->
+      <div class="l2up-item">
+        <img
+          class="l2up-img"
+          src="https://cdn.shopify.com/s/files/1/0925/6645/4658/files/Marie_Claire_Magazine_logo_svg.png?v=1757019169"
+          alt="Marie Claire"
+          loading="lazy"
+        >
+      </div>
+
+      <!-- Logo Vogue -->
+      <div class="l2up-item">
+        <img
+          class="l2up-img"
+          src="https://cdn.shopify.com/s/files/1/0925/6645/4658/files/VOGUE_LOGO_1.svg?v=1757019169"
+          alt="Vogue"
+          loading="lazy"
+        >
+      </div>
+
+      <!-- Logo Allure -->
+      <div class="l2up-item">
+        <img
+          class="l2up-img"
+          src="https://cdn.shopify.com/s/files/1/0925/6645/4658/files/images_3.png?v=1757019169"
+          alt="Allure"
+          loading="lazy"
+        >
+      </div>
+
+      <!-- Logo Cosmopolitan -->
+      <div class="l2up-item">
+        <img
+          class="l2up-img"
+          src="https://cdn.shopify.com/s/files/1/0925/6645/4658/files/images_4.png?v=1757019169"
+          alt="Cosmopolitan"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* --- Ámbito por id de la sección --- */
+    #logos2-{{ section.id }}.l2up{
+      --gap: 24px;
+      --img-h: 42px;
+      --visible: 2;
+      margin:0; padding:0;
+    }
+    #logos2-{{ section.id }} .l2up-vp{
+      overflow:hidden; width:100%;
+    }
+    #logos2-{{ section.id }} .l2up-track{
+      display:flex; align-items:center; gap:var(--gap);
+      will-change:transform;
+      transform: translateX(0);
+    }
+    #logos2-{{ section.id }} .l2up-item{
+      /* 2 visibles al mismo tiempo */
+      flex:0 0 calc((100% - var(--gap)) / var(--visible));
+      display:flex; align-items:center; justify-content:center;
+      min-height:64px;
+    }
+    #logos2-{{ section.id }} .l2up-img{
+      max-height:var(--img-h); max-width:100%;
+      width:auto; height:auto; object-fit:contain;
+      /* Colores originales: sin filtros */
+      filter: none;
+    }
+    @media (max-width: 640px){
+      #logos2-{{ section.id }}.l2up{ --gap:16px; --img-h:36px; }
+    }
+  </style>
+
+  <script>
+    (function(){
+      const root  = document.getElementById('logos2-{{ section.id }}');
+      if(!root) return;
+
+      const track = root.querySelector('.l2up-track');
+      let items   = Array.from(root.querySelectorAll('.l2up-item'));
+      const visible = 2;
+
+      if (items.length <= visible) return; // no hace falta deslizar
+
+      // Duplicar todos los items para un bucle fluido
+      items.forEach(el => track.appendChild(el.cloneNode(true)));
+
+      // Recalcular la lista completa (originales + clones)
+      items = Array.from(track.children);
+
+      let index = 0;
+      const interval = 5000; // 5 segundos
+
+      // Calcular el paso en píxeles (ancho de un item + gap)
+      function getStepPx(){
+        const first = items[0];
+        const gapPx = parseFloat(getComputedStyle(track).gap) || 0;
+        return first.getBoundingClientRect().width + gapPx;
+      }
+
+      function go(i, animate = true){
+        track.style.transition = animate ? 'transform .6s ease' : 'none';
+        const step = getStepPx();
+        track.style.transform = 'translateX(' + (-i * step) + 'px)';
+      }
+
+      // Al llegar al final de los originales, reset instantáneo
+      track.addEventListener('transitionend', () => {
+        if (index >= (items.length / 2)) {
+          index = 0;
+          go(index, false);
+        }
+      });
+
+      let timer = setInterval(() => {
+        index += 1; // mueve 1 logo
+        go(index, true);
+      }, interval);
+
+      // Pausa al pasar el ratón
+      root.addEventListener('mouseenter', ()=> clearInterval(timer));
+      root.addEventListener('mouseleave', ()=>{
+        clearInterval(timer);
+        timer = setInterval(() => { index += 1; go(index, true); }, interval);
+      });
+
+      // Posición inicial
+      go(0, false);
+    })();
+  </script>
+</section>
