@@ -267,6 +267,35 @@
         "text_color": ""
       }
     },
+    "rich_text_HiHk6a": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_zdJ7YD": {
+          "type": "heading",
+          "settings": {
+            "text": "Visto en :",
+            "heading_tag": "h1",
+            "text_color": "",
+            "gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_zdJ7YD"
+      ],
+      "custom_css": [
+        ".section-full {padding-top: 5px; padding-bottom: 0px;}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "vusur_BcikhU": {
       "type": "vusur",
       "blocks": {
@@ -470,6 +499,7 @@
     "image_with_text_overlay_UPTjQE",
     "rich_text_UcjKPj",
     "multi_column_KQ6piT",
+    "rich_text_HiHk6a",
     "vusur_BcikhU",
     "featured-product",
     "faq"
