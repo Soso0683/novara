@@ -57,6 +57,22 @@
         "text_color": ""
       }
     },
+    "custom_liquid_H9qwNp": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".section-full {padding-top: 5px; padding-bottom: 15px;}"
+      ],
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<div class=\"promo-marquee\" role=\"region\" aria-label=\"Banner promocional desplazable\">\n  <div class=\"promo-track\">\n    <span class=\"promo-item\">¡Basta de tratamientos costosos!</span>\n    <span class=\"promo-sep\">|</span>\n    <span class=\"promo-item\">90 días satisfecho o reembolsado</span>\n    <span class=\"promo-sep\">|</span>\n    <span class=\"promo-item\">Envío gratuito</span>\n    <!-- repetición para ciclo infinito -->\n    <span class=\"promo-sep\">|</span>\n    <span class=\"promo-item\">¡Basta de tratamientos costosos!</span>\n    <span class=\"promo-sep\">|</span>\n    <span class=\"promo-item\">90 días satisfecho o reembolsado</span>\n    <span class=\"promo-sep\">|</span>\n    <span class=\"promo-item\">Envío gratuito</span>\n  </div>\n</div>\n<style>\n  .promo-marquee{\n    --height: 40px;\n    --speed: 12s; /* más pequeño = más rápido */\n    --gap: 40px; /* espacio entre los mensajes */\n    --bg: #111;\n    --txt: #fff;\n    --weight: 700;\n    position: relative;\n    overflow: hidden;\n    background: var(--bg);\n    color: var(--txt);\n    height: var(--height);\n    line-height: var(--height);\n    white-space: nowrap;\n    font-weight: var(--weight);\n    font-size: 18px;\n    width: 100vw;\n    margin-left: calc(-50vw + 50%);\n  }\n  .promo-track{\n    display: inline-flex;\n    align-items: center;\n    gap: var(--gap);\n    animation: promo-marquee var(--speed) linear infinite;\n  }\n  .promo-item{ display:inline-block; }\n  .promo-sep{ opacity: .9; }\n  .promo-marquee:hover .promo-track{ animation-play-state: paused; }\n  @keyframes promo-marquee{\n    from { transform: translateX(0); }\n    to { transform: translateX(-50%); } /* mitad porque el contenido está duplicado */\n  }\n  @media (max-width: 640px){\n    .promo-marquee{\n      --height: 36px;\n      --gap: 30px;\n      font-size: 16px;\n    }\n  }\n</style>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "featured-product": {
       "type": "featured-product",
       "blocks": {
@@ -212,6 +228,7 @@
     "image_with_text_overlay_YtKcqM",
     "custom_liquid_iwDhBw",
     "custom_liquid_CwzcdP",
+    "custom_liquid_H9qwNp",
     "featured-product",
     "faq"
   ]
