@@ -25,6 +25,19 @@
         "overlay_opacity": 0
       }
     },
+    "custom_liquid_iwDhBw": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "{%- assign label = 'Excelente' -%}\n{%- assign rating = '4,8' -%}\n{%- assign max = '5' -%}\n{%- assign reviews = '5.800' -%}\n{%- assign star_hex = '#00B67A' -%}\n{%- assign text_hex = '#1A1A1A' -%}\n{%- assign combo_id = 'proofcombo-' | append: 'now' | date: '%s' -%}\n<div id=\"{{ combo_id }}\" class=\"proofcombo\">\n  <!-- LÍNEA DE CONFIANZA -->\n  <div class=\"trust-it\" aria-label=\"Reseñas\">\n    <div class=\"trust-it__stars\" aria-hidden=\"true\">\n      {%- for i in (1..5) -%}\n        <svg class=\"trust-it__star\" viewBox=\"0 0 24 24\" width=\"18\" height=\"18\">\n          <rect x=\"0\" y=\"0\" width=\"24\" height=\"24\" rx=\"3\" ry=\"3\" fill=\"{{ star_hex }}\" />\n          <polygon fill=\"#FFFFFF\" points=\"12,3 14.7,9 21.2,9.6 16.3,13.6 17.9,20 12,16.4 6.1,20 7.7,13.6 2.8,9.6 9.3,9\"/>\n        </svg>\n      {%- endfor -%}\n    </div>\n    <div class=\"trust-it__text\">\n      {{ label }} <strong>{{ rating }}/{{ max }}</strong> | + {{ reviews }} Reseñas\n    </div>\n  </div>\n  <!-- TEXTO DE PRUEBA -->\n  <div class=\"proof-text\">\n    <strong>Clínicamente probado:</strong><br>\n    Resultados visibles desde la<br>\n    <strong>1<sup>a</sup> aplicación</strong>\n  </div>\n</div>\n<style>\n  /* --- Alcance único --- */\n  #{{ combo_id }}.proofcombo{\n    display:grid; place-items:center; gap:10px;\n    text-align:center; font-family:inherit;\n  }\n  /* Línea estilo Trustpilot */\n  #{{ combo_id }} .trust-it{\n    display:flex; align-items:center; justify-content:center;\n    gap:.5rem; font-size:11.2px; color:{{ text_hex }};\n    white-space:nowrap; line-height:1; margin:0; padding:0;\n  }\n  #{{ combo_id }} .trust-it__stars{ display:flex; gap:.15rem; line-height:0 }\n  #{{ combo_id }} .trust-it__star{\n    display:block; border-radius:3px;\n    box-shadow:0 0 0 1px rgba(0,0,0,.06) inset;\n  }\n  #{{ combo_id }} .trust-it__text{ display:flex; gap:.4rem; line-height:1 }\n  /* Bloque de prueba */\n  #{{ combo_id }} .proof-text{\n    font-size:30px; line-height:1.2; font-weight:400; color:#000;\n  }\n  #{{ combo_id }} .proof-text strong{ font-weight:700 }\n  #{{ combo_id }} .proof-text sup{ font-size:.65em; vertical-align:super }\n  /* Responsive */\n  @media (max-width: 640px){\n    #{{ combo_id }} .proof-text{ font-size:26px }\n  }\n</style>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "featured-product": {
       "type": "featured-product",
       "blocks": {
@@ -178,6 +191,7 @@
   },
   "order": [
     "image_with_text_overlay_YtKcqM",
+    "custom_liquid_iwDhBw",
     "featured-product",
     "faq"
   ]
