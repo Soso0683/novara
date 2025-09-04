@@ -117,6 +117,39 @@
         "overlay_opacity": 0
       }
     },
+    "rich_text_UcjKPj": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xQ6A4h": {
+          "type": "heading",
+          "settings": {
+            "text": "Más de 5 800 mujeres ya la han adoptado. ¿Y usted?",
+            "heading_tag": "h1",
+            "text_color": "",
+            "gradient": ""
+          }
+        },
+        "richtext_bcTUtC": {
+          "type": "richtext",
+          "settings": {
+            "content": "<h4>Resultados reales, con personas reales.</h4>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xQ6A4h",
+        "richtext_bcTUtC"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "featured-product": {
       "type": "featured-product",
       "blocks": {
@@ -275,6 +308,7 @@
     "custom_liquid_H9qwNp",
     "rich_text_TdtEqU",
     "image_with_text_overlay_UPTjQE",
+    "rich_text_UcjKPj",
     "featured-product",
     "faq"
   ]
