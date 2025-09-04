@@ -99,6 +99,24 @@
         "text_color": ""
       }
     },
+    "image_with_text_overlay_UPTjQE": {
+      "type": "image-with-text-overlay",
+      "custom_css": [
+        ".section-full {padding-top: 10px; padding-bottom: 20px;}"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
     "featured-product": {
       "type": "featured-product",
       "blocks": {
@@ -256,6 +274,7 @@
     "custom_liquid_CwzcdP",
     "custom_liquid_H9qwNp",
     "rich_text_TdtEqU",
+    "image_with_text_overlay_UPTjQE",
     "featured-product",
     "faq"
   ]
