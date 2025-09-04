@@ -38,6 +38,19 @@
         "text_color": ""
       }
     },
+    "custom_liquid_CwzcdP": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<!-- Botón centrado hacia la sección Producto destacado (1 línea) -->\n<div class=\"cta-center\">\n  <a class=\"cta-scroll one-line\" href=\"#shopify-section-template--26135179592022__featured_product_TFNa8U\" aria-label=\"Descubre el secreto coreano\">\n    Descubre el secreto coreano\n  </a>\n</div>\n<!-- Pequeña frase debajo del botón -->\n<div class=\"cta-note\" aria-hidden=\"true\">\n  <svg class=\"cta-note__ico\" viewBox=\"0 0 24 24\" width=\"14\" height=\"14\">\n    <path fill=\"currentColor\" d=\"M12 5a7 7 0 1 1-6.3 4H3l3.5-3.5L10 9H7.5A5.5 5.5 0 1 0 13 6v2h-2V5z\"/>\n  </svg>\n  <span>Pruébalo durante 90 días – satisfecho o reembolsado.</span>\n</div>\n<style>\n  html { scroll-behavior: smooth; }\n  .cta-center{\n    width:100%;\n    display:flex;\n    justify-content:center;\n    margin: 10px 0 6px;\n  }\n  /* Una sola línea, siempre */\n  .cta-scroll.one-line{\n    display:inline-flex;\n    align-items:center;\n    justify-content:center;\n    text-align:center;\n    gap:8px;\n    /* padding y dimensiones adaptativas para evitar el salto de línea */\n    padding-block:12px;\n    padding-inline: clamp(16px, 4vw, 26px);\n    border-radius:9999px;\n    background:#111; color:#fff;\n    font-weight:700;\n    font-size: clamp(13px, 4.2vw, 17px); /* se reduce en pantallas pequeñas para mantenerse en una sola línea */\n    line-height:1.05;\n    letter-spacing:.2px;\n    white-space: nowrap; /* fuerza una sola línea */\n    max-width: 92vw; /* nunca supera el ancho de la pantalla */\n    box-shadow:0 6px 18px rgba(0,0,0,.14);\n    text-decoration:none;\n    transition:transform .18s ease, box-shadow .18s ease, background-color .18s ease;\n  }\n  .cta-scroll.one-line:hover{ transform:translateY(-1px); box-shadow:0 12px 26px rgba(0,0,0,.20); background:#0e0e0e; }\n  .cta-scroll.one-line:active{ transform:translateY(0); box-shadow:0 6px 18px rgba(0,0,0,.16); }\n  .cta-scroll.one-line:focus-visible{\n    outline:none;\n    box-shadow:0 0 0 2px #fff, 0 0 0 4px rgba(0,0,0,.6);\n  }\n  @media (prefers-reduced-motion: reduce){\n    .cta-scroll.one-line{ transition:none }\n  }\n  .cta-note{\n    display:flex; align-items:center; justify-content:center; gap:6px;\n    color:#3b3b3b; font-size:13.5px; line-height:1.35; text-align:center;\n  }\n  .cta-note__ico{ opacity:.85 }\n  /* Offset si el header es sticky */\n  #shopify-section-template--26135179592022__featured_product_TFNa8U{\n    scroll-margin-top: 90px;\n  }\n</style>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "featured-product": {
       "type": "featured-product",
       "blocks": {
@@ -192,6 +205,7 @@
   "order": [
     "image_with_text_overlay_YtKcqM",
     "custom_liquid_iwDhBw",
+    "custom_liquid_CwzcdP",
     "featured-product",
     "faq"
   ]
