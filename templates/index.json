@@ -833,6 +833,15 @@
         "text_color": ""
       }
     },
+    "fondnoir_Ffg6tR": {
+      "type": "fondnoir",
+      "name": "90-Tage Garantie",
+      "settings": {
+        "badge_alt": "",
+        "title": "Prueba la mascarilla Seoulume sin preocupaciones,con nuestra garantía de reembolso de 90 días.",
+        "text": "<p>Expertas y expertos en <strong>skincare</strong>, dermatólogas y dermatólogos, así como nuestras clientas y clientes, lo confirman: <strong>¡Seoulume ofrece resultados visibles!</strong></p><p>Convencidos de su eficacia, te ofrecemos <strong>90 días de garantía \"satisfecho o reembolsado\"</strong>.<br/><br/>Si no obtienes los resultados esperados, <strong>te devolveremos el importe completo</strong>.</p>"
+      }
+    },
     "faq": {
       "type": "faq",
       "blocks": {
@@ -907,6 +916,7 @@
     "rich_text_YVRPDj",
     "image_with_text_overlay_ncPji6",
     "custom_liquid_xgFYrf",
+    "fondnoir_Ffg6tR",
     "faq"
   ]
 }
