@@ -186,9 +186,9 @@
           "type": "item",
           "settings": {
             "column_size": "3",
-            "title": "Column title",
+            "title": "Sofía L.",
             "heading_tag": "h4",
-            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "content": "<p>Nunca he tolerado las cremas grasas. <strong>Ovaïa</strong> es diferente: se <strong>absorbe rápidamente</strong>, sin brillos ni residuos. ¿Y mi piel? <strong>Más luminosa, clara y uniforme</strong>. Lo <strong>recomiendo al 100%</strong>.</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
