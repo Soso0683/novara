@@ -476,10 +476,22 @@
             "title": "¿Por qué comprar solo en nuestro sitio web?",
             "content": "<p>Nuestros productos están disponibles <strong>exclusivamente</strong> en nuestro sitio oficial.<br/><br/>Las ventas en plataformas externas (Amazon, etc.) son <strong>falsificaciones</strong>.<br/><br/>Para garantizar <strong>autenticidad y calidad</strong>, compra solo en nuestro sitio web.</p>",
             "open_by_default": false,
-            "icon_image": "shopify://shop_images/Capture_d_ecran_2025-08-10_130524.jpg",
+            "icon_image": "shopify://shop_images/Capture_d_ecran_2025-08-10_130505.jpg",
             "icon_alt": "Icon",
             "emoji": "",
             "builtin_icon": "question"
+          }
+        },
+        "item_EfQwCw": {
+          "type": "item",
+          "settings": {
+            "title": "Kostenloser Versand",
+            "content": "<p>Ihre Zufriedenheit hat Priorität – deshalb übernehmen wir die Versandkosten.</p>",
+            "open_by_default": false,
+            "icon_image": "shopify://shop_images/Capture_d_ecran_2025-08-10_130524.jpg",
+            "icon_alt": "Icon",
+            "emoji": "",
+            "builtin_icon": "truck"
           }
         },
         "item_BJEmYP": {
@@ -511,6 +523,7 @@
         "item_7yTxGN",
         "item_BnmTQB",
         "item_iPBYjj",
+        "item_EfQwCw",
         "item_BJEmYP",
         "item_JVeYXX"
       ],
