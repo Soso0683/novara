@@ -234,9 +234,9 @@
           "type": "item",
           "settings": {
             "column_size": "3",
-            "title": "Column title",
+            "title": "Sofia M.",
             "heading_tag": "h4",
-            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "content": "<p>Siempre había tenido <strong>arrugas muy marcadas</strong> en los labios y ya no me atrevía a ponerme pintalabios. Gracias a <strong>Ovaïa</strong>, mis labios han <strong>recuperado volumen</strong> y las <strong>arruguitas han desaparecido</strong>. Impresionante. Finalmente, un <strong>producto que entiende nuestra edad</strong>.<br/><br/></p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
