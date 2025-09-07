@@ -935,23 +935,6 @@
         "accordion_text_color": ""
       }
     },
-    "image_with_text_overlay_VV8EPd": {
-      "type": "image-with-text-overlay",
-      "name": "Image with text overlay",
-      "settings": {
-        "full_width": true,
-        "allow_transparent_header": false,
-        "enable_parallax": false,
-        "image_size": "auto",
-        "image": "shopify://shop_images/logo_scholl_29.png",
-        "mobile_image": "shopify://shop_images/logo_scholl_29.png",
-        "mobile_text_position": "place-self-center text-center",
-        "desktop_text_position": "sm:place-self-center sm:text-center",
-        "text_color": "#ffffff",
-        "overlay_color": "#000000",
-        "overlay_opacity": 0
-      }
-    },
     "rich_text_bPd68b": {
       "type": "rich-text",
       "blocks": {
@@ -991,6 +974,23 @@
         "background_gradient": "",
         "text_color": ""
       }
+    },
+    "image_with_text_overlay_VV8EPd": {
+      "type": "image-with-text-overlay",
+      "name": "Image with text overlay",
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "image": "shopify://shop_images/logo_scholl_29.png",
+        "mobile_image": "shopify://shop_images/logo_scholl_29.png",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
     }
   },
   "order": [
@@ -1016,7 +1016,7 @@
     "custom_liquid_xgFYrf",
     "fondnoir_Ffg6tR",
     "faq",
-    "image_with_text_overlay_VV8EPd",
-    "rich_text_bPd68b"
+    "rich_text_bPd68b",
+    "image_with_text_overlay_VV8EPd"
   ]
 }
