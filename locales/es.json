@@ -440,5 +440,12 @@
         "other": "Ha recibido {{ count }} reseñas."
       }
     }
+  },
+  "shopify": {
+    "checkout": {
+      "general": {
+        "autocomplete_powered_by_google": " "
+      }
+    }
   }
 }
