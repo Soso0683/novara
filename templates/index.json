@@ -552,24 +552,28 @@
         "clip_ELrtmj": {
           "type": "clip",
           "settings": {
+            "video": "shopify://files/videos/0810(2).mp4",
             "mp4_url": ""
           }
         },
         "clip_Qg6kb7": {
           "type": "clip",
           "settings": {
+            "video": "shopify://files/videos/0810(1).mp4",
             "mp4_url": ""
           }
         },
         "clip_gRmMpU": {
           "type": "clip",
           "settings": {
+            "video": "shopify://files/videos/0810.mp4",
             "mp4_url": ""
           }
         },
         "clip_VXcYfb": {
           "type": "clip",
           "settings": {
+            "video": "shopify://files/videos/0810(9).mp4",
             "mp4_url": ""
           }
         }
