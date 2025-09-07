@@ -449,8 +449,8 @@
         "item_7yTxGN": {
           "type": "item",
           "settings": {
-            "title": "Kostenloser Versand",
-            "content": "<p>Ihre Zufriedenheit hat Priorität – deshalb übernehmen wir die Versandkosten.</p>",
+            "title": "Envío gratuito",
+            "content": "<p><strong>Entrega: </strong></p><p>Su satisfacción es nuestra prioridad: cubrimos los gastos de envío.</p>",
             "open_by_default": true,
             "icon_image": "shopify://shop_images/Capture_d_ecran_2025-08-10_130425.jpg",
             "icon_alt": "Icon",
