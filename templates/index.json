@@ -710,9 +710,9 @@
           "settings": {
             "image": "shopify://shop_images/curcuma_b08f1ab3-6a02-4068-96ef-e4e31ba89620.jpg",
             "column_size": "3",
-            "title": "Column title",
+            "title": "Cúrcuma",
             "heading_tag": "h4",
-            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "content": "<p>Aporta <strong>luminosidad al tono de la piel</strong>, reduce las <strong>rojeces</strong> y refuerza la <strong>radiancia natural</strong> de la piel.</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -723,9 +723,9 @@
           "settings": {
             "image": "shopify://shop_images/5.jpg",
             "column_size": "3",
-            "title": "Column title",
+            "title": "Colágeno",
             "heading_tag": "h4",
-            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "content": "<p>Promueve la <strong>elasticidad de la piel</strong> y le da un aspecto <strong>más firme</strong>.</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
