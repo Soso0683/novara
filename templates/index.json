@@ -210,9 +210,9 @@
           "type": "item",
           "settings": {
             "column_size": "3",
-            "title": "Column title",
+            "title": "Valeria M.",
             "heading_tag": "h4",
-            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "content": "<p>Tengo la piel <strong>propensa al acné y sensible</strong>, y siempre me ha costado encontrar un producto que <strong>no causara reacciones</strong>.bCon <strong>Ovaïa</strong> noto una <strong>verdadera diferencia</strong>: menos rojeces, poros más afinados y un <strong>tono de piel más luminoso</strong>. Se ha convertido en <strong>mi ritual nocturno imprescindible</strong>.</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
