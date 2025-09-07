@@ -633,6 +633,67 @@
         "text_color": ""
       }
     },
+    "4pictos_fEmKbC": {
+      "type": "4pictos",
+      "blocks": {
+        "item_YFen3z": {
+          "type": "item",
+          "settings": {
+            "icon_image": "shopify://shop_images/humidity_1_1.webp",
+            "icon_alt": "Icona",
+            "emoji": "💧",
+            "line1": "Piel",
+            "line2": "grasa"
+          }
+        },
+        "item_yUB4FP": {
+          "type": "item",
+          "settings": {
+            "icon_image": "shopify://shop_images/hair_1_1.webp",
+            "icon_alt": "Icona",
+            "emoji": "🧴",
+            "line1": "Piel",
+            "line2": "sensible"
+          }
+        },
+        "item_nYbiBX": {
+          "type": "item",
+          "settings": {
+            "icon_image": "shopify://shop_images/wind.webp",
+            "icon_alt": "Icona",
+            "emoji": "🌬️",
+            "line1": "Piel",
+            "line2": "seca"
+          }
+        },
+        "item_TYW4GT": {
+          "type": "item",
+          "settings": {
+            "icon_image": "shopify://shop_images/natural-dyes.webp",
+            "icon_alt": "Icona",
+            "emoji": "🍃",
+            "line1": "Piel",
+            "line2": "madura"
+          }
+        }
+      },
+      "block_order": [
+        "item_YFen3z",
+        "item_yUB4FP",
+        "item_nYbiBX",
+        "item_TYW4GT"
+      ],
+      "name": "Pictos pelle",
+      "settings": {
+        "heading": "Perfecta para todo tipo de piel",
+        "title_size": 36,
+        "icon_size": 56,
+        "text_size": 18,
+        "gap": 28,
+        "space_top": 28,
+        "text_color": "#111111"
+      }
+    },
     "faq": {
       "type": "faq",
       "blocks": {
@@ -702,6 +763,7 @@
     "4videos_xMkcCr",
     "image_with_text_overlay_QM7fMY",
     "rich_text_JWbXPM",
+    "4pictos_fEmKbC",
     "faq"
   ]
 }
