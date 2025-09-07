@@ -1,0 +1,124 @@
+{% comment %} Sezione: Pictos (griglia responsive 2x2 su mobile / 4 su desktop) + Titolo + Spazio superiore {% endcomment %}
+
+<section id="pictos-{{ section.id }}" class="pictos"
+  style="
+    --gap: {{ section.settings.gap | default: 28 }}px;
+    --icon: {{ section.settings.icon_size | default: 56 }}px;
+    --txt: {{ section.settings.text_size | default: 18 }}px;
+    --title: {{ section.settings.title_size | default: 32 }}px;
+    --color: {{ section.settings.text_color | default: '#111111' }};
+    --space-top: {{ section.settings.space_top | default: 24 }}px;
+  ">
+  
+  {%- if section.settings.heading != blank -%}
+    <h2 class="pictos__title">{{ section.settings.heading }}</h2>
+  {%- endif -%}
+
+  <div class="pictos__grid">
+    {%- for block in section.blocks -%}
+      {%- assign l2 = block.settings.line2 | default: '-' | strip -%}
+      <div class="pictos__item" {{ block.shopify_attributes }}>
+        <div class="pictos__icon" aria-hidden="true">
+          {%- if block.settings.icon_image != blank -%}
+            <img
+              src="{{ block.settings.icon_image | img_url: '160x160' }}"
+              alt="{{ block.settings.icon_alt | escape }}"
+              width="{{ section.settings.icon_size | default: 56 }}"
+              height="{{ section.settings.icon_size | default: 56 }}"
+              loading="lazy">
+          {%- elsif block.settings.emoji != blank -%}
+            <span class="pictos__emoji">{{ block.settings.emoji }}</span>
+          {%- else -%}
+            <svg viewBox="0 0 24 24" class="pictos__svg">
+              <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          {%- endif -%}
+        </div>
+        <div class="pictos__label">
+          {{ block.settings.line1 | escape }}
+          {%- if l2 != '-' and l2 != '' -%}<br>{{ l2 | escape }}{%- endif -%}
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+<style>
+  #pictos-{{ section.id }}.pictos{
+    color:var(--color);
+    font-family:inherit;
+    margin-top: var(--space-top); /* spazio con la sezione precedente */
+  }
+
+  /* Stile del titolo */
+  #pictos-{{ section.id }} .pictos__title{
+    margin: 0 0 18px 0;
+    text-align:center;
+    font-weight: 800;
+    font-size: var(--title);
+    line-height: 1.1;
+    letter-spacing: .2px;
+  }
+  @media (max-width: 680px){
+    #pictos-{{ section.id }} .pictos__title{ font-size: calc(var(--title) * .88); }
+  }
+
+  #pictos-{{ section.id }} .pictos__grid{
+    display:grid;
+    grid-template-columns: repeat(2, minmax(0,1fr)); /* mobile */
+    gap: var(--gap);
+    align-items:start;
+    justify-items:center;
+  }
+  @media (min-width: 900px){
+    #pictos-{{ section.id }} .pictos__grid{ grid-template-columns: repeat(4, minmax(0,1fr)); }
+  }
+  #pictos-{{ section.id }} .pictos__item{ text-align:center }
+  #pictos-{{ section.id }} .pictos__icon{
+    width:var(--icon); height:var(--icon); margin:0 auto 8px; display:grid; place-items:center;
+  }
+  #pictos-{{ section.id }} .pictos__icon img{ width:100%; height:100%; object-fit:contain; display:block }
+  #pictos-{{ section.id }} .pictos__emoji{ font-size: calc(var(--icon) * 0.9); line-height:1 }
+  #pictos-{{ section.id }} .pictos__svg{ width:100%; height:100%; display:block }
+  #pictos-{{ section.id }} .pictos__label{ font-size:var(--txt); line-height:1.25; font-weight:500; word-break:keep-all }
+</style>
+
+{% schema %}
+{
+  "name": "Pictos pelle (griglia)",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Titolo", "default": "Perfetta per tutti i tipi di pelle" },
+    { "type": "range", "id": "title_size", "label": "Dimensione del titolo (px)", "min": 20, "max": 44, "step": 1, "default": 32 },
+    { "type": "range", "id": "icon_size", "label": "Dimensione dei pittogrammi (px)", "min": 32, "max": 96, "step": 2, "default": 56 },
+    { "type": "range", "id": "text_size", "label": "Dimensione del testo (px)", "min": 12, "max": 24, "step": 1, "default": 18 },
+    { "type": "range", "id": "gap", "label": "Spazio tra gli elementi (px)", "min": 8, "max": 48, "step": 2, "default": 28 },
+    { "type": "range", "id": "space_top", "label": "Spazio superiore (px)", "min": 0, "max": 120, "step": 2, "default": 24 },
+    { "type": "color", "id": "text_color", "label": "Colore del testo", "default": "#111111" }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Pittogramma",
+      "settings": [
+        { "type": "image_picker", "id": "icon_image", "label": "Pittogramma (immagine)" },
+        { "type": "text", "id": "icon_alt", "label": "Alt dell’icona", "default": "Icona" },
+        { "type": "text", "id": "emoji", "label": "…o Emoji (es: 💧, 🍃)", "default": "•", "info": "Verrà utilizzato se non è fornita un’immagine." },
+        { "type": "text", "id": "line1", "label": "Testo riga 1", "default": "Grassa" },
+        { "type": "text", "id": "line2", "label": "Testo riga 2 (inserire « - » per non visualizzare)", "default": "Pelle" }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Pictos pelle",
+      "blocks": [
+        { "type": "item", "settings": { "emoji": "💧", "line1": "Grassa", "line2": "Pelle" } },
+        { "type": "item", "settings": { "emoji": "🧴", "line1": "Sensibile", "line2": "Pelle" } },
+        { "type": "item", "settings": { "emoji": "🌬️", "line1": "Secca", "line2": "Pelle" } },
+        { "type": "item", "settings": { "emoji": "🍃", "line1": "Matura", "line2": "Pelle" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
