@@ -385,6 +385,14 @@
             "product": "{{section.settings.product}}"
           }
         },
+        "image_6FAVXC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/bienfaits_mobile.svg",
+            "alignment": "center",
+            "max_width": 500
+          }
+        },
         "buy-buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -427,6 +435,7 @@
         "liquid_wzLNay",
         "rating",
         "kaching_bundles_app_block_UxEH7k",
+        "image_6FAVXC",
         "buy-buttons",
         "liquid_6QhJBx",
         "liquid_3tqyPU",
