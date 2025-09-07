@@ -770,6 +770,32 @@
         "text_color": ""
       }
     },
+    "rich_text_YVRPDj": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_3EE7k4": {
+          "type": "heading",
+          "settings": {
+            "text": "Vive una transformación regeneradora",
+            "heading_tag": "h2",
+            "text_color": "",
+            "gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_3EE7k4"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "faq": {
       "type": "faq",
       "blocks": {
@@ -841,6 +867,7 @@
     "rich_text_JWbXPM",
     "4pictos_fEmKbC",
     "multi_column_Ay3zAU",
+    "rich_text_YVRPDj",
     "faq"
   ]
 }
