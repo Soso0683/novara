@@ -497,8 +497,8 @@
         "item_BJEmYP": {
           "type": "item",
           "settings": {
-            "title": "Kostenloser Versand",
-            "content": "<p>Ihre Zufriedenheit hat Priorität – deshalb übernehmen wir die Versandkosten.</p>",
+            "title": "¿Cuánto tiempo se tarda en ver resultados?",
+            "content": "<p><strong>Mejora desde la primera aplicación.</strong><br/><br/>Para resultados visibles (líneas finas reducidas, piel más firme): uso regular durante <strong>2-4 semanas</strong>.</p>",
             "open_by_default": false,
             "icon_image": "shopify://shop_images/Capture_d_ecran_2025-08-10_130543.jpg",
             "icon_alt": "Icon",
