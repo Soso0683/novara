@@ -443,6 +443,64 @@
         "input_text_color": ""
       }
     },
+    "menu_deroulant_bQEamX": {
+      "type": "menu-deroulant",
+      "blocks": {
+        "item_7yTxGN": {
+          "type": "item",
+          "settings": {
+            "title": "Kostenloser Versand",
+            "content": "<p>Ihre Zufriedenheit hat Priorität – deshalb übernehmen wir die Versandkosten.</p>",
+            "open_by_default": true,
+            "icon_image": "shopify://shop_images/Capture_d_ecran_2025-08-10_130425.jpg",
+            "icon_alt": "Icon",
+            "emoji": "",
+            "builtin_icon": "truck"
+          }
+        },
+        "item_BnmTQB": {
+          "type": "item",
+          "settings": {
+            "title": "90 Tage KOSTENLOS testen",
+            "content": "<p>Testen Sie Seoulume 90 Tage lang. Nicht überzeugt? Wir erstatten Ihnen den Kaufpreis.</p>",
+            "open_by_default": false,
+            "icon_alt": "Icon",
+            "emoji": "",
+            "builtin_icon": "refresh"
+          }
+        },
+        "item_iPBYjj": {
+          "type": "item",
+          "settings": {
+            "title": "Warum nur hier kaufen?",
+            "content": "<p>Originalprodukt, direkter Kundensupport und exklusive Angebote nur auf unserer Seite.</p>",
+            "open_by_default": false,
+            "icon_alt": "Icon",
+            "emoji": "",
+            "builtin_icon": "question"
+          }
+        }
+      },
+      "block_order": [
+        "item_7yTxGN",
+        "item_BnmTQB",
+        "item_iPBYjj"
+      ],
+      "name": "Accordéon pictos (DE)",
+      "settings": {
+        "boxed": true,
+        "maxw": 760,
+        "bg": "#ffffff",
+        "text": "#111111",
+        "border": "#eaeaea",
+        "accent": "#111111",
+        "icon_size": 22,
+        "pad_x": 16,
+        "pad_y": 14,
+        "radius": 10,
+        "single_open": false
+      }
+    },
     "faq": {
       "type": "faq",
       "blocks": {
@@ -508,6 +566,7 @@
     "rich_text_HiHk6a",
     "vusur_BcikhU",
     "featured-product",
+    "menu_deroulant_bQEamX",
     "faq"
   ]
 }
