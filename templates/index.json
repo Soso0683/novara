@@ -461,7 +461,7 @@
         "item_BnmTQB": {
           "type": "item",
           "settings": {
-            "title": "90 Tage KOSTENLOS testen",
+            "title": "Prueba gratuita durante 90 días",
             "content": "<p>Prueba gratuita durante 90 días</p><p><br/>Creemos en la calidad de nuestros productos.<br/><br/>Cada pedido está cubierto por nuestra garantía de <strong>satisfacción o reembolso de 90 días</strong>.<br/><br/>Prueba Seoulume sin ningún riesgo: <strong>tu piel te lo agradecerá</strong>.</p>",
             "open_by_default": false,
             "icon_image": "shopify://shop_images/Capture_d_ecran_2025-08-10_130441.jpg",
@@ -473,8 +473,8 @@
         "item_iPBYjj": {
           "type": "item",
           "settings": {
-            "title": "Warum nur hier kaufen?",
-            "content": "<p>Originalprodukt, direkter Kundensupport und exklusive Angebote nur auf unserer Seite.</p>",
+            "title": "¿Por qué comprar solo en nuestro sitio web?",
+            "content": "<p>Nuestros productos están disponibles <strong>exclusivamente</strong> en nuestro sitio oficial.<br/><br/>Las ventas en plataformas externas (Amazon, etc.) son <strong>falsificaciones</strong>.<br/><br/>Para garantizar <strong>autenticidad y calidad</strong>, compra solo en nuestro sitio web.</p>",
             "open_by_default": false,
             "icon_image": "shopify://shop_images/Capture_d_ecran_2025-08-10_130524.jpg",
             "icon_alt": "Icon",
