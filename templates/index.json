@@ -694,6 +694,9 @@
         "item_nYbiBX",
         "item_TYW4GT"
       ],
+      "custom_css": [
+        ".section-full {padding-top: 20px; padding-bottom: 5px;}"
+      ],
       "name": "Pictos pelle",
       "settings": {
         "heading": "Perfecta para todo tipo de piel",
