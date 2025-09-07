@@ -1,0 +1,234 @@
+{% comment %}
+  Section : Carrousel vidéos — infini réel + posters préchargés (anti-écran noir)
+{% endcomment %}
+
+<section id="vids-{{ section.id }}" class="vidsec"
+  style="--pad-top: {{ section.settings.pad_top | default: 24 }}px; --pad-bottom: {{ section.settings.pad_bottom | default: 8 }}px;">
+  {% if section.settings.heading != blank %}
+    <h2 class="vidsec__title">{{ section.settings.heading }}</h2>
+  {% endif %}
+
+  <div class="vidsec__viewport">
+    <button class="vidsec__btn vidsec__btn--prev" aria-label="Zurück" type="button">‹</button>
+
+    <div class="vidsec__track">
+      {%- assign default_poster = section.settings.default_poster | default: blank -%}
+      {%- for block in section.blocks -%}
+        {%- assign poster_img = block.settings.poster | default: default_poster -%}
+        <div class="vidsec__item"
+             {% if poster_img != blank %} style="--poster:url('{{ poster_img | img_url: '800x' }}')" {% endif %}
+             data-poster="{% if poster_img != blank %}{{ poster_img | img_url: '800x' }}{% endif %}"
+             {{ block.shopify_attributes }}>
+          {% if block.settings.video != blank %}
+            {{ block.settings.video
+              | video_tag:
+                class: 'vidsec__video',
+                autoplay: true,
+                muted: true,
+                loop: true,
+                playsinline: true,
+                controls: false,
+                preload: 'auto'
+              | replace: '<video', '<video webkit-playsinline' }}
+          {% elsif block.settings.mp4_url != blank %}
+            <video class="vidsec__video"
+                   src="{{ block.settings.mp4_url }}"
+                   autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
+          {% else %}
+            <div class="vidsec__placeholder">Video fehlt</div>
+          {% endif %}
+        </div>
+      {%- endfor -%}
+    </div>
+
+    <button class="vidsec__btn vidsec__btn--next" aria-label="Weiter" type="button">›</button>
+  </div>
+</section>
+
+<style>
+  #vids-{{ section.id }}.vidsec{
+    --gap:16px; --radius:16px;
+    color:#111; font-family:inherit;
+    padding-top: var(--pad-top);
+    padding-bottom: var(--pad-bottom);
+  }
+  #vids-{{ section.id }} .vidsec__title{
+    margin:0 0 14px; text-align:center; font-weight:800; letter-spacing:-.02em;
+    line-height:1.15; font-size:clamp(28px,5.6vw,40px);
+  }
+  #vids-{{ section.id }} .vidsec__viewport{
+    position:relative; overflow:hidden; width:100%; touch-action:pan-y;
+  }
+  #vids-{{ section.id }} .vidsec__track{
+    --visible:3; display:flex; gap:var(--gap); align-items:stretch;
+    transition:transform .5s ease; will-change:transform;
+  }
+  #vids-{{ section.id }} .vidsec__item{
+    position:relative;
+    flex:0 0 calc((100% - (var(--gap) * (var(--visible) - 1))) / var(--visible));
+    border-radius:var(--radius); overflow:hidden; background:#000;
+  }
+  /* Poster visuel : s’efface quand la vidéo joue */
+  #vids-{{ section.id }} .vidsec__item::before{
+    content:""; position:absolute; inset:0;
+    background:#000 center/cover no-repeat;
+    background-image: var(--poster);
+    opacity: var(--poster-opacity, 1);
+    transition: opacity .18s ease;
+    pointer-events:none;
+  }
+  #vids-{{ section.id }} .vidsec__item.is-playing::before{ opacity:0 }
+
+  #vids-{{ section.id }} .vidsec__video{
+    width:100%; height:100%; display:block; object-fit:cover; pointer-events:none;
+    /* on laisse la vidéo derrière ; le poster masque jusqu’au play */
+  }
+  #vids-{{ section.id }} .vidsec__placeholder{
+    height:220px; display:grid; place-items:center; color:#888; background:#f1f1f1;
+  }
+  #vids-{{ section.id }} .vidsec__btn{
+    position:absolute; top:50%; transform:translateY(-50%); z-index:10;
+    width:36px; height:36px; border-radius:50%; border:none; cursor:pointer;
+    background:#111; color:#fff; opacity:.96; display:grid; place-items:center;
+  }
+  #vids-{{ section.id }} .vidsec__btn--prev{ left:6px } .vidsec__btn--next{ right:6px }
+
+  @media (max-width:768px){
+    #vids-{{ section.id }} .vidsec__track{ --visible:2 }
+    #vids-{{ section.id }} .vidsec__btn{ width:32px; height:32px }
+  }
+</style>
+
+<script>
+(function(){
+  const root  = document.getElementById('vids-{{ section.id }}'); if(!root) return;
+  const track = root.querySelector('.vidsec__track');
+  const prevB = root.querySelector('.vidsec__btn--prev');
+  const nextB = root.querySelector('.vidsec__btn--next');
+
+  const getVisible = () => parseInt(getComputedStyle(track).getPropertyValue('--visible')) || 3;
+  const gapVal = () => parseFloat(getComputedStyle(track).gap) || 0;
+
+  let originals = Array.from(track.children);
+  const ORIG = originals.length;
+  if (!ORIG) return;
+
+  /* Précharge posters (si fournis) */
+  originals.forEach(item=>{
+    const p = item.getAttribute('data-poster');
+    if (p){
+      const img = new Image(); img.decoding = 'async'; img.src = p;
+    }
+  });
+
+  /* Duplique tout le set avant/après : [orig | orig | orig] */
+  const fragBefore = document.createDocumentFragment();
+  const fragAfter  = document.createDocumentFragment();
+  originals.forEach(el => fragBefore.appendChild(el.cloneNode(true)));
+  originals.forEach(el => fragAfter.appendChild(el.cloneNode(true)));
+  track.insertBefore(fragBefore, track.firstChild);
+  track.appendChild(fragAfter);
+
+  let items = Array.from(track.children);
+  let index = ORIG; /* on démarre au milieu */
+  let step  = 0;
+
+  function computeStep(){
+    const el = items[index];
+    if (!el) return;
+    const w = el.getBoundingClientRect().width || 0;
+    step = w + gapVal();
+  }
+  function translate(to, animate=true){
+    index = to;
+    track.style.transition = animate ? 'transform .5s ease' : 'none';
+    track.style.transform  = `translateX(${-index * step}px)`;
+  }
+
+  /* Wrap infini transparent (jump sans animation) */
+  track.addEventListener('transitionend', ()=>{
+    if (index >= ORIG*2){ translate(index - ORIG, false); }
+    else if (index < ORIG){ translate(index + ORIG, false); }
+  });
+
+  /* Boutons */
+  nextB.addEventListener('click', e=>{ e.stopPropagation(); computeStep(); translate(index + 1, true); });
+  prevB.addEventListener('click', e=>{ e.stopPropagation(); computeStep(); translate(index - 1, true); });
+
+  /* Swipe */
+  const vp = root.querySelector('.vidsec__viewport');
+  let startX=0, delta=0, dragging=false;
+  const start = (x, target) => {
+    if (target && target.closest && target.closest('.vidsec__btn')) return;
+    dragging=true; startX=x; delta=0; track.style.transition='none';
+  };
+  const move  = x => { if(!dragging) return; computeStep(); delta=x-startX; track.style.transform=`translateX(${-(index*step)+delta}px)`; };
+  const end   = () => {
+    if(!dragging) return; dragging=false; computeStep();
+    const thr = Math.max(40, step*0.18);
+    if (delta >  thr) translate(index-1, true);
+    else if (delta < -thr) translate(index+1, true);
+    else translate(index, true);
+  };
+  vp.addEventListener('pointerdown', e=>{ vp.setPointerCapture(e.pointerId); start(e.clientX, e.target); });
+  vp.addEventListener('pointermove', e=> move(e.clientX));
+  vp.addEventListener('pointerup', end);
+  vp.addEventListener('pointercancel', end);
+  vp.addEventListener('touchstart', e=> start(e.touches[0].clientX, e.target), {passive:true});
+  vp.addEventListener('touchmove',  e=> move(e.touches[0].clientX), {passive:true});
+  vp.addEventListener('touchend', end);
+
+  /* Vidéos : toutes jouent en continu + font disparaître le poster dès que ça joue */
+  function armVideo(v){
+    if (v.dataset.init === '1') return;
+    v.dataset.init = '1';
+    v.muted = true; v.loop = true; v.playsInline = true;
+    v.setAttribute('preload','auto'); v.setAttribute('webkit-playsinline','');
+
+    const item = v.closest('.vidsec__item');
+    const onPlay = ()=> item && item.classList.add('is-playing');
+
+    v.addEventListener('playing', onPlay);
+    v.addEventListener('loadeddata', ()=>{ /* force un frame dispo puis play */
+      try{ if (v.readyState < 2) v.currentTime = Math.max(0, v.currentTime + 0.01); }catch(e){}
+      try{ v.play().catch(()=>{}); }catch(e){}
+    }, {once:true});
+    try{ v.play().catch(()=>{}); }catch(e){}
+    document.addEventListener('visibilitychange', ()=>{ if(!document.hidden){ try{ v.play().catch(()=>{});}catch(e){} }});
+  }
+  function armAll(scope){ Array.from(scope.querySelectorAll('video')).forEach(armVideo); }
+
+  /* Armer originaux + clones */
+  armAll(track);
+
+  /* Dimensions / position initiale */
+  const ro = new ResizeObserver(()=>{ computeStep(); translate(index, false); });
+  ro.observe(root);
+  window.addEventListener('load', ()=>{ computeStep(); translate(index, false); });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Vidéos (upload + titre)",
+  "settings": [
+    { "type": "text",  "id": "heading",         "label": "Titre", "default": "Konkrete Ergebnisse" },
+    { "type": "image_picker", "id": "default_poster", "label": "Poster par défaut (anti-écran noir)" },
+    { "type": "range", "id": "pad_top",         "label": "Padding haut (px)", "min": 0, "max": 80, "step": 2, "default": 24 },
+    { "type": "range", "id": "pad_bottom",      "label": "Padding bas (px)",  "min": 0, "max": 80, "step": 2, "default": 8 }
+  ],
+  "blocks": [
+    {
+      "type": "clip",
+      "name": "Vidéo",
+      "settings": [
+        { "type": "video", "id": "video", "label": "Vidéo (téléversée sur Shopify)" },
+        { "type": "url",   "id": "mp4_url", "label": "OU URL .mp4 (fallback)" },
+        { "type": "image_picker", "id": "poster", "label": "Poster de la vidéo (recommandé)" }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [{ "name": "Vidéos + Titre", "blocks": [{ "type": "clip" }, { "type": "clip" }, { "type": "clip" }, { "type": "clip" }] }]
+}
+{% endschema %}
