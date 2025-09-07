@@ -161,6 +161,7 @@
         "item_b3UJPX": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/71.png",
             "column_size": "3",
             "title": "Lucía G.",
             "heading_tag": "h4",
@@ -173,6 +174,7 @@
         "item_CUcYQL": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/68.png",
             "column_size": "3",
             "title": "María P.",
             "heading_tag": "h4",
@@ -185,6 +187,7 @@
         "item_nhiKh9": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/72.png",
             "column_size": "3",
             "title": "Sofía L.",
             "heading_tag": "h4",
@@ -197,6 +200,7 @@
         "item_7VwBkX": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/69.png",
             "column_size": "3",
             "title": "Carmen V.",
             "heading_tag": "h4",
@@ -209,6 +213,7 @@
         "item_9ptiej": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/73.png",
             "column_size": "3",
             "title": "Valeria M.",
             "heading_tag": "h4",
@@ -221,6 +226,7 @@
         "item_HaVcXe": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/67.png",
             "column_size": "3",
             "title": "Isabel R.",
             "heading_tag": "h4",
@@ -233,6 +239,7 @@
         "item_3DpfgM": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/70.png",
             "column_size": "3",
             "title": "Sofia M.",
             "heading_tag": "h4",
