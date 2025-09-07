@@ -845,6 +845,7 @@
       "type": "fondnoir",
       "name": "90-Tage Garantie",
       "settings": {
+        "badge": "shopify://shop_images/logo_scholl_32.png",
         "badge_alt": "",
         "title": "Prueba la mascarilla Seoulume sin preocupaciones,con nuestra garantía de reembolso de 90 días.",
         "text": "<p>Expertas y expertos en <strong>skincare</strong>, dermatólogas y dermatólogos, así como nuestras clientas y clientes, lo confirman: <strong>¡Seoulume ofrece resultados visibles!</strong></p><p>Convencidos de su eficacia, te ofrecemos <strong>90 días de garantía \"satisfecho o reembolsado\"</strong>.<br/><br/>Si no obtienes los resultados esperados, <strong>te devolveremos el importe completo</strong>.</p>"
@@ -942,11 +943,13 @@
         "allow_transparent_header": false,
         "enable_parallax": false,
         "image_size": "auto",
+        "image": "shopify://shop_images/logo_scholl_29.png",
+        "mobile_image": "shopify://shop_images/logo_scholl_29.png",
         "mobile_text_position": "place-self-center text-center",
         "desktop_text_position": "sm:place-self-center sm:text-center",
         "text_color": "#ffffff",
         "overlay_color": "#000000",
-        "overlay_opacity": 30
+        "overlay_opacity": 0
       }
     },
     "rich_text_bPd68b": {
