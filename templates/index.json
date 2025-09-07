@@ -162,9 +162,9 @@
           "type": "item",
           "settings": {
             "column_size": "3",
-            "title": "Column title",
+            "title": "Lucía G.",
             "heading_tag": "h4",
-            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "content": "<p>He probado innumerables cremas para atenuar mis manchas pigmentarias, sin éxito.<br/>Con <strong>Ovaïa</strong> finalmente veo <strong>resultados visibles y naturales</strong>. ¡Y sin ninguna textura pesada! Se ha convertido en <strong>mi ritual de belleza nocturno</strong>.</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -262,8 +262,8 @@
         "gap": "medium",
         "text_alignment": "start",
         "subheading": "",
-        "title": "Lucía G.",
-        "content": "<p>He probado innumerables cremas para atenuar mis manchas pigmentarias, sin éxito.<br/>Con <strong>Ovaïa</strong> finalmente veo <strong>resultados visibles y naturales</strong>. ¡Y sin ninguna textura pesada! Se ha convertido en <strong>mi ritual de belleza nocturno</strong>.<br/><br/></p>",
+        "title": "",
+        "content": "",
         "background": "",
         "background_gradient": "",
         "text_color": ""
