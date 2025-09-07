@@ -485,8 +485,8 @@
         "item_EfQwCw": {
           "type": "item",
           "settings": {
-            "title": "Kostenloser Versand",
-            "content": "<p>Ihre Zufriedenheit hat Priorität – deshalb übernehmen wir die Versandkosten.</p>",
+            "title": "Modo de uso",
+            "content": "<p>Por la mañana, enjuaga la piel con agua tibia y retira suavemente la mascarilla.<br/><br/>Aplicar 1-2 veces por semana.<br/><br/>Un tubo = 10-15 aplicaciones ≈ 2 meses de uso.<br/><br/><strong>Resultado:</strong> piel luminosa, joven, sana y fresca.<br/><br/>(En caso de duda, prueba primero en una pequeña área de la piel.)<br/><br/></p>",
             "open_by_default": false,
             "icon_image": "shopify://shop_images/Capture_d_ecran_2025-08-10_130524.jpg",
             "icon_alt": "Icon",
