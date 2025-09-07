@@ -198,9 +198,9 @@
           "type": "item",
           "settings": {
             "column_size": "3",
-            "title": "Column title",
+            "title": "Carmen V.",
             "heading_tag": "h4",
-            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "content": "<p>Con la edad, mi piel se veía <strong>apagada</strong>, sin luminosidad. <strong>Ovaïa</strong> me ha devuelto un <strong>tono fresco y radiante</strong>, con una rutina <strong>sencillísima</strong>. Solo <strong>un producto</strong>, <strong>una brocha</strong> ¡y listo! Esta es <strong>mi rutina de cuidado personal</strong>.</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
