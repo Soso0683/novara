@@ -462,8 +462,9 @@
           "type": "item",
           "settings": {
             "title": "90 Tage KOSTENLOS testen",
-            "content": "<p>Testen Sie Seoulume 90 Tage lang. Nicht überzeugt? Wir erstatten Ihnen den Kaufpreis.</p>",
+            "content": "<p>Prueba gratuita durante 90 días</p><p><br/>Creemos en la calidad de nuestros productos.<br/><br/>Cada pedido está cubierto por nuestra garantía de <strong>satisfacción o reembolso de 90 días</strong>.<br/><br/>Prueba Seoulume sin ningún riesgo: <strong>tu piel te lo agradecerá</strong>.</p>",
             "open_by_default": false,
+            "icon_image": "shopify://shop_images/Capture_d_ecran_2025-08-10_130441.jpg",
             "icon_alt": "Icon",
             "emoji": "",
             "builtin_icon": "refresh"
@@ -475,16 +476,43 @@
             "title": "Warum nur hier kaufen?",
             "content": "<p>Originalprodukt, direkter Kundensupport und exklusive Angebote nur auf unserer Seite.</p>",
             "open_by_default": false,
+            "icon_image": "shopify://shop_images/Capture_d_ecran_2025-08-10_130524.jpg",
             "icon_alt": "Icon",
             "emoji": "",
             "builtin_icon": "question"
+          }
+        },
+        "item_BJEmYP": {
+          "type": "item",
+          "settings": {
+            "title": "Kostenloser Versand",
+            "content": "<p>Ihre Zufriedenheit hat Priorität – deshalb übernehmen wir die Versandkosten.</p>",
+            "open_by_default": false,
+            "icon_image": "shopify://shop_images/Capture_d_ecran_2025-08-10_130543.jpg",
+            "icon_alt": "Icon",
+            "emoji": "",
+            "builtin_icon": "truck"
+          }
+        },
+        "item_JVeYXX": {
+          "type": "item",
+          "settings": {
+            "title": "Kostenloser Versand",
+            "content": "<p>Ihre Zufriedenheit hat Priorität – deshalb übernehmen wir die Versandkosten.</p>",
+            "open_by_default": false,
+            "icon_image": "shopify://shop_images/Capture_d_ecran_2025-08-10_130555.jpg",
+            "icon_alt": "Icon",
+            "emoji": "",
+            "builtin_icon": "truck"
           }
         }
       },
       "block_order": [
         "item_7yTxGN",
         "item_BnmTQB",
-        "item_iPBYjj"
+        "item_iPBYjj",
+        "item_BJEmYP",
+        "item_JVeYXX"
       ],
       "name": "Accordéon pictos (DE)",
       "settings": {
