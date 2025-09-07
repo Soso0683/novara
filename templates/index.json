@@ -694,6 +694,65 @@
         "text_color": "#111111"
       }
     },
+    "multi_column_Ay3zAU": {
+      "type": "multi-column",
+      "blocks": {
+        "item_DBAVBn": {
+          "type": "item",
+          "settings": {
+            "column_size": "3",
+            "title": "Column title",
+            "heading_tag": "h4",
+            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_6ttkrA": {
+          "type": "item",
+          "settings": {
+            "column_size": "3",
+            "title": "Column title",
+            "heading_tag": "h4",
+            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_qnkGKB": {
+          "type": "item",
+          "settings": {
+            "column_size": "3",
+            "title": "Column title",
+            "heading_tag": "h4",
+            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "item_DBAVBn",
+        "item_6ttkrA",
+        "item_qnkGKB"
+      ],
+      "name": "Multi-column",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "gap": "medium",
+        "text_alignment": "start",
+        "subheading": "",
+        "title": "Alisar las arrugas y restaurar la elasticidad de tu piel",
+        "content": "<p>La eficacia de la mascarilla coreana <strong>Ovaïa </strong>se basa en su <strong>única combinación de ingredientes específicos y altamente eficaces</strong>:</p>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "faq": {
       "type": "faq",
       "blocks": {
@@ -764,6 +823,7 @@
     "image_with_text_overlay_QM7fMY",
     "rich_text_JWbXPM",
     "4pictos_fEmKbC",
+    "multi_column_Ay3zAU",
     "faq"
   ]
 }
