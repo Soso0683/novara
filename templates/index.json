@@ -174,9 +174,9 @@
           "type": "item",
           "settings": {
             "column_size": "3",
-            "title": "Column title",
+            "title": "María P.",
             "heading_tag": "h4",
-            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "content": "<p>Desde la <strong>primera noche</strong> noté un cambio en mi piel: más <strong>luminoso</strong>, mejor <strong>hidratado</strong>. Y todo esto <strong>sin irritar ni engrasar</strong> mi piel sensible. Me <strong>encanta la textura</strong> de la mascarilla.</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
