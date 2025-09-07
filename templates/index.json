@@ -600,6 +600,32 @@
         "overlay_opacity": 0
       }
     },
+    "rich_text_JWbXPM": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ypJPLm": {
+          "type": "heading",
+          "settings": {
+            "text": "Dra. Lucía Hernández sobre la mascarilla coreana de cúrcuma y colágeno Seoulume",
+            "heading_tag": "h2",
+            "text_color": "",
+            "gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_ypJPLm"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "faq": {
       "type": "faq",
       "blocks": {
@@ -668,6 +694,7 @@
     "menu_deroulant_bQEamX",
     "4videos_xMkcCr",
     "image_with_text_overlay_QM7fMY",
+    "rich_text_JWbXPM",
     "faq"
   ]
 }
