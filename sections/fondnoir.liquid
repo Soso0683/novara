@@ -1,0 +1,48 @@
+{% comment %}
+  Section : Garantie 90 Tage (fond noir, badge en haut, titre + texte)
+{% endcomment %}
+
+<section id="g90-{{ section.id }}" class="g90">
+  <div class="g90__inner">
+    {% if section.settings.badge != blank %}
+      <figure class="g90__badge">
+        <img src="{{ section.settings.badge | img_url: '600x' }}"
+             alt="{{ section.settings.badge_alt | escape }}"
+             loading="lazy" width="300" height="300">
+      </figure>
+    {% endif %}
+
+    {% if section.settings.title != blank %}
+      <h2 class="g90__title">{{ section.settings.title }}</h2>
+    {% endif %}
+
+    {% if section.settings.text != blank %}
+      <div class="g90__text rte">{{ section.settings.text }}</div>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+  #g90-{{ section.id }}.g90{ background:#0b0b0b; color:#fff; font-family:inherit }
+  #g90-{{ section.id }} .g90__inner{ max-width:880px; margin:0 auto; padding:28px 18px 40px; text-align:center }
+  #g90-{{ section.id }} .g90__badge{ margin:0 auto 18px; display:block; width:min(300px,70vw) }
+  #g90-{{ section.id }} .g90__badge img{ width:100%; height:auto; display:block }
+  #g90-{{ section.id }} .g90__title{ font-size:clamp(22px,4.4vw,30px); line-height:1.25; font-weight:700; margin:6px auto 16px }
+  #g90-{{ section.id }} .g90__text{ font-size:clamp(15px,2.6vw,17px); line-height:1.7; opacity:.95 }
+  #g90-{{ section.id }} .g90__text p{ margin:0 0 14px }
+</style>
+
+{% schema %}
+{
+  "name": "90-Tage Garantie",
+  "settings": [
+    { "type": "image_picker", "id": "badge", "label": "Badge/Logo (rond)" },
+    { "type": "text", "id": "badge_alt", "label": "Texte alternatif du badge", "default": "90 Tage – zufrieden oder Geld zurück" },
+    { "type": "text", "id": "title", "label": "Titre", "default": "Testen Sie die Seoulume-Maske ganz unbesorgt – mit unserer 90-Tage-Geld-zurück-Garantie!" },
+    { "type": "richtext", "id": "text", "label": "Texte", "default": "<p>Von ihrer Wirksamkeit überzeugt, bieten wir Ihnen eine 90-Tage-Zufriedenheitsgarantie.</p><p>Sollten Sie die erwarteten Ergebnisse nicht erzielen, erstatten wir Ihnen den vollen Betrag.</p>" }
+  ],
+  "presets": [
+    { "name": "90-Tage Garantie" }
+  ]
+}
+{% endschema %}
