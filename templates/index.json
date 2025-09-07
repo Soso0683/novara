@@ -862,8 +862,8 @@
         "item_kBmHtP": {
           "type": "item",
           "settings": {
-            "title": "Question",
-            "content": "<p>Write content to answer to common questions your customers may have about your products, shipping policies..</p>"
+            "title": "¿La mascarilla es adecuada para piel sensible?",
+            "content": "<p>Sí, absolutamente. Nuestra mascarilla está <strong>dermatológicamente probada</strong> y es lo suficientemente suave para <strong>todo tipo de piel</strong>, incluida la piel sensible.</p><p>En caso de duda, te recomendamos <strong>realizar una prueba previa</strong> en una pequeña zona de la piel antes del primer uso.</p>"
           }
         },
         "item_qfEtgB": {
