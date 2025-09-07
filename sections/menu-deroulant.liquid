@@ -1,0 +1,171 @@
+{% comment %}
+  Section: Accordéon pictos (DE) — corrigé (pas de default vide sur "emoji")
+  Place: sections/accordeon-pictos.liquid
+{% endcomment %}
+
+<section id="acc-{{ section.id }}" class="accde" style="
+  --acc-bg: {{ section.settings.bg | default: '#ffffff' }};
+  --acc-text: {{ section.settings.text | default: '#111111' }};
+  --acc-border: {{ section.settings.border | default: '#eaeaea' }};
+  --acc-accent: {{ section.settings.accent | default: '#111111' }};
+  --acc-icon-size: {{ section.settings.icon_size | default: 22 }}px;
+  --acc-radius: {{ section.settings.radius | default: 10 }}px;
+  --acc-pad-x: {{ section.settings.pad_x | default: 16 }}px;
+  --acc-pad-y: {{ section.settings.pad_y | default: 14 }}px;
+">
+  <div class="accde__wrap {% if section.settings.boxed %}accde__boxed{% endif %}">
+    {%- for block in section.blocks -%}
+      {%- assign open_now = block.settings.open_by_default -%}
+      <details class="accde__item" {{ block.shopify_attributes }} {% if open_now %}open{% endif %}>
+        <summary class="accde__summary">
+          <span class="accde__left">
+            {%- if block.settings.icon_image != blank -%}
+              <img class="accde__ico" src="{{ block.settings.icon_image | img_url: '64x64' }}" alt="{{ block.settings.icon_alt | escape }}" width="{{ section.settings.icon_size | default: 22 }}" height="{{ section.settings.icon_size | default: 22 }}" loading="lazy">
+            {%- elsif block.settings.emoji != blank -%}
+              <span class="accde__ico accde__ico--emoji" aria-hidden="true">{{ block.settings.emoji }}</span>
+            {%- else -%}
+              <span class="accde__ico" aria-hidden="true">
+                {%- case block.settings.builtin_icon -%}
+                  {%- when 'truck' -%}
+                    <svg viewBox="0 0 24 24" width="100%" height="100%"><path fill="currentColor" d="M3 7h11v7h3l2 2v1H17a2 2 0 1 1-4 0H9a2 2 0 1 1-4 0H3V8c0-.6.4-1 1-1zm16 5h-3V9h2l1 2v1z"/></svg>
+                  {%- when 'refresh' -%}
+                    <svg viewBox="0 0 24 24" width="100%" height="100%"><path fill="currentColor" d="M17.7 6.3A8 8 0 1 0 20 12h-2a6 6 0 1 1-1.8-4.3L14 10h6V4l-2.3 2.3z"/></svg>
+                  {%- when 'question' -%}
+                    <svg viewBox="0 0 24 24" width="100%" height="100%"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 15h-2v-2h2v2zm2-7a3 3 0 0 1-2 2.8V14h-2v-2.8a2 2 0 1 1 2-2h2z"/></svg>
+                  {%- when 'play' -%}
+                    <svg viewBox="0 0 24 24" width="100%" height="100%"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+                  {%- when 'time' -%}
+                    <svg viewBox="0 0 24 24" width="100%" height="100%"><path fill="currentColor" d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm1 5h-2v6l5 3 1-1.732-4-2.268V7z"/></svg>
+                  {%- when 'leaf' -%}
+                    <svg viewBox="0 0 24 24" width="100%" height="100%"><path fill="currentColor" d="M12 2C7 2 2 7 2 12c6 0 10 4 10 10 5 0 10-5 10-10S17 2 12 2z"/></svg>
+                  {%- when 'shield' -%}
+                    <svg viewBox="0 0 24 24" width="100%" height="100%"><path fill="currentColor" d="M12 2l8 4v6c0 5-3.4 9.7-8 10-4.6-.3-8-5-8-10V6l8-4z"/></svg>
+                  {%- when 'gift' -%}
+                    <svg viewBox="0 0 24 24" width="100%" height="100%"><path fill="currentColor" d="M20 8h-3.2A3 3 0 0 0 12 5.2 3 3 0 0 0 7.2 8H4v4h16V8zm-9 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM4 14h7v6H4v-6zm9 0h7v6h-7v-6z"/></svg>
+                  {%- else -%}
+                    <svg viewBox="0 0 24 24" width="100%" height="100%"><circle cx="12" cy="12" r="8" fill="currentColor"/></svg>
+                {%- endcase -%}
+              </span>
+            {%- endif -%}
+            <span class="accde__title">{{ block.settings.title | escape }}</span>
+          </span>
+
+          <span class="accde__chev" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
+          </span>
+        </summary>
+
+        <div class="accde__panel rte">
+          {{ block.settings.content }}
+        </div>
+      </details>
+    {%- endfor -%}
+  </div>
+</section>
+
+<style>
+  #acc-{{ section.id }}.accde{background:var(--acc-bg); color:var(--acc-text);}
+  #acc-{{ section.id }} .accde__wrap{width:100%;}
+  #acc-{{ section.id }} .accde__boxed{max-width:{{ section.settings.maxw | default: 760 }}px;margin:0 auto;}
+
+  #acc-{{ section.id }} .accde__item{ border-top:1px solid var(--acc-border); background:var(--acc-bg); }
+  #acc-{{ section.id }} .accde__item:last-child{ border-bottom:1px solid var(--acc-border); }
+
+  #acc-{{ section.id }} .accde__summary{
+    list-style:none; cursor:pointer; display:flex; align-items:center; justify-content:space-between;
+    gap:10px; padding:var(--acc-pad-y) var(--acc-pad-x);
+  }
+  #acc-{{ section.id }} .accde__summary::-webkit-details-marker{display:none;}
+
+  #acc-{{ section.id }} .accde__left{display:flex; align-items:center; gap:10px;}
+  #acc-{{ section.id }} .accde__ico{width:var(--acc-icon-size); height:var(--acc-icon-size); color:var(--acc-accent); display:inline-block;}
+  #acc-{{ section.id }} .accde__ico--emoji{font-size: calc(var(--acc-icon-size) * .9); line-height:1;}
+  #acc-{{ section.id }} .accde__title{font-weight:700;}
+
+  #acc-{{ section.id }} .accde__chev{transition: transform .25s ease; color:var(--acc-text);}
+  #acc-{{ section.id }} details[open] .accde__chev{transform: rotate(180deg);}
+
+  #acc-{{ section.id }} .accde__panel{
+    padding: 0 var(--acc-pad-x) var(--acc-pad-y) calc(var(--acc-pad-x) + var(--acc-icon-size) + 10px);
+    color: var(--acc-text);
+  }
+
+  #acc-{{ section.id }} .rte p{margin:0 0 8px;}
+  #acc-{{ section.id }} .rte ul{margin:.5em 0 .5em 1.2em;}
+</style>
+
+{%- if section.settings.single_open -%}
+<script>
+  (function(){
+    const root = document.getElementById('acc-{{ section.id }}');
+    if(!root) return;
+    root.querySelectorAll('details').forEach(d=>{
+      d.addEventListener('toggle', ()=>{
+        if(d.open){
+          root.querySelectorAll('details').forEach(o=>{ if(o!==d) o.removeAttribute('open'); });
+        }
+      });
+    });
+  })();
+</script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Accordéon pictos (DE)",
+  "settings": [
+    { "type": "checkbox", "id": "boxed", "label": "Limiter la largeur", "default": true },
+    { "type": "range", "id": "maxw", "label": "Largeur max (px)", "min": 520, "max": 1000, "step": 20, "default": 760 },
+    { "type": "color", "id": "bg", "label": "Arrière-plan", "default": "#ffffff" },
+    { "type": "color", "id": "text", "label": "Texte", "default": "#111111" },
+    { "type": "color", "id": "border", "label": "Séparateurs", "default": "#eaeaea" },
+    { "type": "color", "id": "accent", "label": "Couleur des pictos", "default": "#111111" },
+    { "type": "range", "id": "icon_size", "label": "Taille des pictos (px)", "min": 16, "max": 36, "step": 1, "default": 22 },
+    { "type": "range", "id": "pad_x", "label": "Padding horizontal (px)", "min": 8, "max": 28, "step": 1, "default": 16 },
+    { "type": "range", "id": "pad_y", "label": "Padding vertical (px)", "min": 6, "max": 24, "step": 1, "default": 14 },
+    { "type": "range", "id": "radius", "label": "Rayon (si tu ajoutes un fond)", "min": 0, "max": 20, "step": 2, "default": 10 },
+    { "type": "checkbox", "id": "single_open", "label": "N'en ouvrir qu'un à la fois", "default": false }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Entrée",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Titre", "default": "Kostenloser Versand" },
+        { "type": "richtext", "id": "content", "label": "Contenu", "default": "<p>Ihre Zufriedenheit hat Priorität – deshalb übernehmen wir die Versandkosten.</p>" },
+        { "type": "checkbox", "id": "open_by_default", "label": "Ouvert par défaut", "default": false },
+
+        { "type": "image_picker", "id": "icon_image", "label": "Pictogramme (image facultative)" },
+        { "type": "text", "id": "icon_alt", "label": "Texte alternatif", "default": "Icon" },
+        { "type": "text", "id": "emoji", "label": "…ou Emoji (ex: 🚚, 💡)" },
+
+        { "type": "select", "id": "builtin_icon", "label": "…ou Icône intégrée", "default": "truck",
+          "options": [
+            { "value": "truck", "label": "Camion" },
+            { "value": "refresh", "label": "Essayer / Retour" },
+            { "value": "question", "label": "Question" },
+            { "value": "play", "label": "Conseils / Utilisation" },
+            { "value": "time", "label": "Durée / Résultats" },
+            { "value": "leaf", "label": "Ingrédients / Naturel" },
+            { "value": "shield", "label": "Garantie" },
+            { "value": "gift", "label": "Bonus / Cadeau" }
+          ]
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "Accordéon pictos (DE)",
+      "blocks": [
+        { "type": "item", "settings": { "title": "Kostenloser Versand", "builtin_icon": "truck", "open_by_default": true } },
+        { "type": "item", "settings": { "title": "90 Tage KOSTENLOS testen", "builtin_icon": "refresh",
+          "content": "<p>Testen Sie Seoulume 90 Tage lang. Nicht überzeugt? Wir erstatten Ihnen den Kaufpreis.</p>" } },
+        { "type": "item", "settings": { "title": "Warum nur hier kaufen?", "builtin_icon": "question",
+          "content": "<p>Originalprodukt, direkter Kundensupport und exklusive Angebote nur auf unserer Seite.</p>" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
