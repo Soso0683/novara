@@ -944,17 +944,11 @@
     "rich_text_bPd68b": {
       "type": "rich-text",
       "blocks": {
-        "subheading_R4x9mN": {
-          "type": "subheading",
-          "settings": {
-            "text": "Subheading"
-          }
-        },
         "heading_P3wRda": {
           "type": "heading",
           "settings": {
-            "text": "Heading",
-            "heading_tag": "h1",
+            "text": "¿No has encontrado la respuesta que buscabas?",
+            "heading_tag": "h2",
             "text_color": "",
             "gradient": ""
           }
@@ -962,14 +956,20 @@
         "richtext_twU6kn": {
           "type": "richtext",
           "settings": {
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+            "content": "<p><strong>¡Nuestro equipo está a tu disposición!</strong></p>"
+          }
+        },
+        "richtext_UNrKUL": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Nuestro <strong>servicio de atención al cliente</strong> está disponible <strong>los 7 días de la semana</strong>.<br/><br/><strong>Tiempo medio de respuesta:</strong> 24 horas.</p>"
           }
         }
       },
       "block_order": [
-        "subheading_R4x9mN",
         "heading_P3wRda",
-        "richtext_twU6kn"
+        "richtext_twU6kn",
+        "richtext_UNrKUL"
       ],
       "name": "Rich text",
       "settings": {
