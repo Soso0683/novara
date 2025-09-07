@@ -883,22 +883,15 @@
         "item_rby6nH": {
           "type": "item",
           "settings": {
-            "title": "Question",
-            "content": "<p>Write content to answer to common questions your customers may have about your products, shipping policies..</p>"
+            "title": "¿Puedo usar la mascarilla junto con otros productos para el cuidado de la piel?",
+            "content": "<p><br/>Por supuesto. Puedes aplicarla <strong>después de tu tónico, sérum o crema hidratante habitual</strong>.<br/><br/>Esto incluso puede <strong>potenciar la eficacia</strong> de toda tu rutina de cuidado facial.</p>"
           }
         },
         "item_4bry6c": {
           "type": "item",
           "settings": {
-            "title": "Question",
-            "content": "<p>Write content to answer to common questions your customers may have about your products, shipping policies..</p>"
-          }
-        },
-        "item_TKNUDD": {
-          "type": "item",
-          "settings": {
-            "title": "Question",
-            "content": "<p>Write content to answer to common questions your customers may have about your products, shipping policies..</p>"
+            "title": "¿Cuánto tiempo tarda la entrega?",
+            "content": "<p>La entrega tarda <strong>8-10 días laborables</strong>.<br/><br/>Recibirás <strong>actualizaciones por correo electrónico</strong> sobre el estado de tu pedido.</p>"
           }
         }
       },
@@ -909,8 +902,7 @@
         "item_qfEtgB",
         "item_TbVgx8",
         "item_rby6nH",
-        "item_4bry6c",
-        "item_TKNUDD"
+        "item_4bry6c"
       ],
       "settings": {
         "full_width": false,
