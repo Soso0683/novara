@@ -845,32 +845,72 @@
     "faq": {
       "type": "faq",
       "blocks": {
-        "166442457738b23caf-0": {
+        "item_qbHzgj": {
           "type": "item",
           "settings": {
-            "title": "Do you ship overseas?",
-            "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
+            "title": "¿Por qué debería comprar solo en nuestro sitio oficial?",
+            "content": "<p>Nuestros productos están disponibles <strong>exclusivamente</strong> a través de nuestro sitio oficial.<br/><br/>Las ventas en plataformas de terceros (por ejemplo, Amazon) corresponden a <strong>falsificaciones de calidad inferior</strong>.</p><p>Para garantizar la <strong>autenticidad y la calidad</strong>, compra <strong>únicamente con nosotros</strong>.<br/><br/>No nos hacemos responsables de productos adquiridos en otros lugares.</p>"
           }
         },
-        "166442457738b23caf-1": {
+        "item_PJtj9Q": {
           "type": "item",
           "settings": {
-            "title": "How long will it take to get my orders?",
-            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
+            "title": "Question",
+            "content": "<p>Write content to answer to common questions your customers may have about your products, shipping policies..</p>"
           }
         },
-        "166442457738b23caf-2": {
+        "item_kBmHtP": {
           "type": "item",
           "settings": {
-            "title": "Any question?",
-            "content": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+            "title": "Question",
+            "content": "<p>Write content to answer to common questions your customers may have about your products, shipping policies..</p>"
+          }
+        },
+        "item_qfEtgB": {
+          "type": "item",
+          "settings": {
+            "title": "Question",
+            "content": "<p>Write content to answer to common questions your customers may have about your products, shipping policies..</p>"
+          }
+        },
+        "item_TbVgx8": {
+          "type": "item",
+          "settings": {
+            "title": "Question",
+            "content": "<p>Write content to answer to common questions your customers may have about your products, shipping policies..</p>"
+          }
+        },
+        "item_rby6nH": {
+          "type": "item",
+          "settings": {
+            "title": "Question",
+            "content": "<p>Write content to answer to common questions your customers may have about your products, shipping policies..</p>"
+          }
+        },
+        "item_4bry6c": {
+          "type": "item",
+          "settings": {
+            "title": "Question",
+            "content": "<p>Write content to answer to common questions your customers may have about your products, shipping policies..</p>"
+          }
+        },
+        "item_TKNUDD": {
+          "type": "item",
+          "settings": {
+            "title": "Question",
+            "content": "<p>Write content to answer to common questions your customers may have about your products, shipping policies..</p>"
           }
         }
       },
       "block_order": [
-        "166442457738b23caf-0",
-        "166442457738b23caf-1",
-        "166442457738b23caf-2"
+        "item_qbHzgj",
+        "item_PJtj9Q",
+        "item_kBmHtP",
+        "item_qfEtgB",
+        "item_TbVgx8",
+        "item_rby6nH",
+        "item_4bry6c",
+        "item_TKNUDD"
       ],
       "settings": {
         "full_width": false,
