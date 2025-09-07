@@ -542,6 +542,47 @@
         "single_open": false
       }
     },
+    "4videos_xMkcCr": {
+      "type": "4videos",
+      "blocks": {
+        "clip_ELrtmj": {
+          "type": "clip",
+          "settings": {
+            "mp4_url": ""
+          }
+        },
+        "clip_Qg6kb7": {
+          "type": "clip",
+          "settings": {
+            "mp4_url": ""
+          }
+        },
+        "clip_gRmMpU": {
+          "type": "clip",
+          "settings": {
+            "mp4_url": ""
+          }
+        },
+        "clip_VXcYfb": {
+          "type": "clip",
+          "settings": {
+            "mp4_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "clip_ELrtmj",
+        "clip_Qg6kb7",
+        "clip_gRmMpU",
+        "clip_VXcYfb"
+      ],
+      "name": "Vidéos + Titre",
+      "settings": {
+        "heading": "Resultados concretos",
+        "pad_top": 8,
+        "pad_bottom": 8
+      }
+    },
     "faq": {
       "type": "faq",
       "blocks": {
@@ -608,6 +649,7 @@
     "vusur_BcikhU",
     "featured-product",
     "menu_deroulant_bQEamX",
+    "4videos_xMkcCr",
     "faq"
   ]
 }
