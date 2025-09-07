@@ -781,10 +781,17 @@
             "text_color": "",
             "gradient": ""
           }
+        },
+        "richtext_Gq8kzr": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Todos los signos visibles de <strong>cansancio, estrés o envejecimiento</strong> desaparecen de tu rostro.<br/><br/>Nuestro tratamiento <strong>fortalece tu piel</strong> y ayuda a <strong>restaurar su elasticidad</strong>.</p>"
+          }
         }
       },
       "block_order": [
-        "heading_3EE7k4"
+        "heading_3EE7k4",
+        "richtext_Gq8kzr"
       ],
       "name": "Rich text",
       "settings": {
