@@ -820,6 +820,19 @@
         "overlay_opacity": 0
       }
     },
+    "custom_liquid_xgFYrf": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<!-- Botón centrado hacia la sección Producto destacado (1 línea) -->\n<div class=\"cta-center\">\n  <a class=\"cta-scroll one-line\"\n     href=\"#shopify-section-template--26135179592022__featured_product_TFNa8U\"\n     aria-label=\"Aprovecha la oferta\">\n    ¡Aprovecha&nbsp;la&nbsp;oferta!\n  </a>\n</div>\n\n<style>\n  html { scroll-behavior: smooth; }\n\n  /* Espaciado vertical reducido alrededor del botón */\n  .cta-center{\n    width:100%;\n    display:flex;\n    justify-content:center;\n    margin: 6px 0; /* más cerca de las secciones circundantes */\n  }\n\n  /* Botón más grande (altura, padding, tipografía) */\n  .cta-scroll.one-line{\n    display:inline-flex;\n    align-items:center;\n    justify-content:center;\n    padding-block:14px;                     /* + altura */\n    padding-inline: clamp(20px, 5.2vw, 34px);\n    border-radius:9999px;\n    background:#111; color:#fff;\n    font-weight:700;\n    font-size: clamp(15px, 4.2vw, 18px);    /* + tamaño texto */\n    line-height:1.05;\n    letter-spacing:.2px;\n    white-space: nowrap;\n    max-width: 92vw;\n    text-decoration:none;\n    box-shadow:0 6px 18px rgba(0,0,0,.14);\n    transition:transform .18s ease, box-shadow .18s ease, background-color .18s ease;\n  }\n  .cta-scroll.one-line:hover{ transform:translateY(-1px); box-shadow:0 12px 26px rgba(0,0,0,.20); background:#0e0e0e; }\n  .cta-scroll.one-line:active{ transform:translateY(0); box-shadow:0 6px 18px rgba(0,0,0,.16); }\n  .cta-scroll.one-line:focus-visible{ outline:none; box-shadow:0 0 0 2px #fff, 0 0 0 4px rgba(0,0,0,.6); }\n\n  /* Offset si hay header sticky */\n  #shopify-section-template--26135179592022__featured_product_TFNa8U{\n    scroll-margin-top: 90px;\n  }\n</style>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "faq": {
       "type": "faq",
       "blocks": {
@@ -893,6 +906,7 @@
     "multi_column_Ay3zAU",
     "rich_text_YVRPDj",
     "image_with_text_overlay_ncPji6",
+    "custom_liquid_xgFYrf",
     "faq"
   ]
 }
