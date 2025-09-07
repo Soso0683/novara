@@ -362,12 +362,6 @@
             "liquid": "{% assign now_s = 'now' | date: '%s' %}\n{% assign uid = 'stock-' | append: now_s %}\n<span id=\"{{ uid }}\" class=\"badge badge--red\">\n  <span class=\"badge__dot\" aria-hidden=\"true\"></span>\n  <span>¡Solo 5 unidades disponibles!</span>\n</span>\n<style>\n  #{{ uid }}.badge{\n    display:inline-flex; align-items:center; gap:8px;\n    padding:8px 12px; border-radius:10px;\n    font-size:13px; font-weight:700; line-height:1;\n    border:1px solid #F5C2C0;\n    background:#FCE8E7; color:#B42318;\n    white-space:nowrap;\n  }\n  /* Punto parpadeante */\n  #{{ uid }} .badge__dot{\n    width:10px; height:10px; border-radius:50%;\n    background: currentColor; display:inline-block;\n    box-shadow: 0 0 0 0 currentColor;\n    animation: {{ uid }}-blink 1.1s ease-in-out infinite;\n  }\n  @keyframes {{ uid }}-blink{\n    0%, 100% { opacity:1; transform:scale(1); box-shadow:0 0 0 0 currentColor; }\n    50% { opacity:.35; transform:scale(.85); box-shadow:0 0 0 4px rgba(180,35,24,.15); }\n  }\n  /* Accesibilidad */\n  @media (prefers-reduced-motion: reduce){\n    #{{ uid }} .badge__dot{ animation-duration: 2.2s; }\n  }\n</style>"
           }
         },
-        "price": {
-          "type": "price",
-          "settings": {
-            "show_taxes_notice": false
-          }
-        },
         "rating": {
           "type": "rating",
           "settings": {
@@ -420,7 +414,6 @@
         "title",
         "liquid_eDQ3Wj",
         "liquid_wzLNay",
-        "price",
         "rating",
         "kaching_bundles_app_block_UxEH7k",
         "buy-buttons",
