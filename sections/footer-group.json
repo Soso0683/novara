@@ -88,15 +88,6 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "newsletter": {
-          "type": "newsletter",
-          "settings": {
-            "image_width": 150,
-            "heading_size": "h3",
-            "title": "Sign up for new stories and personal offers",
-            "content": ""
-          }
-        },
         "links": {
           "type": "links",
           "settings": {
@@ -108,14 +99,13 @@
         "text": {
           "type": "text",
           "settings": {
-            "title": "About",
-            "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>",
+            "title": "Contactos",
+            "content": "<p>Servicio de atención al cliente: <a><strong>contact@ovaia.com</strong></a><br/><br/>Horarios: <strong>Lun–Vie</strong> 9:00–12:00 y 14:00–18:00 / <strong>Sáb y Dom</strong> 10:00–12:00</p>",
             "enable_follow_on_shop": true
           }
         }
       },
       "block_order": [
-        "newsletter",
         "links",
         "text"
       ],
