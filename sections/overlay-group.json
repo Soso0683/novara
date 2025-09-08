@@ -48,6 +48,9 @@
     "search-drawer": {
       "type": "search-drawer",
       "disabled": true,
+      "custom_css": [
+        "a[href=\"/search\"] {display: none !important;}"
+      ],
       "settings": {
         "full_width": false,
         "show_article_category": true,
