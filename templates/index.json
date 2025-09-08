@@ -17,7 +17,7 @@
         "allow_transparent_header": false,
         "enable_parallax": false,
         "image_size": "auto",
-        "image": "shopify://shop_images/ordi_nature.svg",
+        "image": "shopify://shop_images/ordi_nature_2.png",
         "mobile_image": "shopify://shop_images/homepage-mobile_f524a741-3bdc-4eff-a0b0-3be9af8add05.jpg",
         "mobile_text_position": "place-self-center text-center",
         "desktop_text_position": "sm:place-self-center sm:text-center",
