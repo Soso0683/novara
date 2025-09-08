@@ -17,6 +17,9 @@ the underlying logic of the menu.
   :root {
     --sticky-header-enabled: {%- if section.settings.enable_sticky -%}1{% else %}0{% endif %};
   }
+  a[href="/search"] {
+    display: none !important;
+  }
 
   #shopify-section-{{ section.id }} {
     --header-grid-template: "main-nav logo secondary-nav" / minmax(0, 1fr) auto minmax(0, 1fr);
