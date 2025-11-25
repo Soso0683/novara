@@ -388,7 +388,7 @@
         "image_6FAVXC": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/bienfaits_mobile.svg",
+            "image": "shopify://shop_images/bienfaits_mobile_1.svg",
             "alignment": "center",
             "max_width": 500
           }
